@@ -124,7 +124,7 @@ export default function Experience() {
               return (
                 <div className="flex items-center justify-center">
                   <Link
-                    to={`/experience/${row.experienceId}`}
+                    to={`/experience/update/${row.experienceId}`}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Edit
