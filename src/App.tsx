@@ -5,7 +5,7 @@ import ProtecterRoute from "./Components/Shared/ProtecterRoute/ProtecterRoute";
 import Login from "./Pages/Login/Login";
 function App() {
   return (
-    <div className="flex min-h-screen w-full">
+    <div className="flex min-h-screen w-full overflow-x-hidden">
       <Routes>
         <Route
           path="/*"

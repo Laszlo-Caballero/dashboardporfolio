@@ -33,7 +33,7 @@ export default function Experience() {
   }
 
   return (
-    <div className="w-full h-full flex flex-col p-6">
+    <div className="w-full flex flex-col p-6">
       <div className="flex items-center justify-between py-4">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Experience
@@ -50,7 +50,7 @@ export default function Experience() {
       <Table
         className={{
           table:
-            "w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400",
+            " h-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-hidden overflow-x-auto",
           header: {
             thead:
               "text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400",
@@ -58,8 +58,9 @@ export default function Experience() {
           },
           body: {
             tr: "bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200",
-            td: "h-full px-6 py-4",
+            td: "h-full px-6 py-4 max-w-[500px] truncate",
           },
+          container: "overflow-y-auto relative",
         }}
         data={data.body}
         columns={[
