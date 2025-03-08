@@ -33,7 +33,20 @@ export default function Experience() {
   }
 
   return (
-    <div className="w-full h-full p-6">
+    <div className="w-full h-full flex flex-col p-6">
+      <div className="flex items-center justify-between py-4">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          Experience
+        </h2>
+
+        <Link
+          to="create"
+          className="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-500"
+        >
+          Create
+        </Link>
+      </div>
+
       <Table
         className={{
           table:

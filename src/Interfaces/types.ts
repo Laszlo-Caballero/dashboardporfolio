@@ -52,3 +52,21 @@ export interface ImagesResponsive {
   __v: number;
   type?: string;
 }
+
+export interface ProyectBody {
+  title: string;
+  description: string;
+  urlImage: string;
+  tecnologies: string[];
+}
+
+export interface ExperienceBody {
+  title: string;
+  description: string;
+  company: string;
+  image: {
+    url?: string;
+    file?: File;
+  };
+  time: string;
+}

@@ -11,7 +11,7 @@ export default function Aside() {
   const { user, logout } = useUser();
 
   return (
-    <aside className="sticky top-0 left-0 z-40 min-w-64 h-full transition-transform -translate-x-full sm:translate-x-0">
+    <aside className="sticky top-0 left-0 z-40 min-w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
       <div className="flex flex-col h-full w-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div className="overflow-y-auto py-4 px-3 ">
           <div className="flex items-center pl-2 mb-5">

@@ -20,9 +20,12 @@ importers:
       axios:
         specifier: ^1.8.2
         version: 1.8.2
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       componentsla:
-        specifier: ^1.1.0
-        version: 1.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^1.4.0
+        version: 1.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       js-cookie:
         specifier: ^3.0.5
         version: 3.0.5
@@ -35,6 +38,9 @@ importers:
       react-router:
         specifier: ^7.3.0
         version: 7.3.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      tailwind-merge:
+        specifier: ^3.0.2
+        version: 3.0.2
       tailwindcss:
         specifier: ^4.0.12
         version: 4.0.12
@@ -694,8 +700,8 @@ packages:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
-  componentsla@1.1.0:
-    resolution: {integrity: sha512-T68k7D98p8jWtI1z6Cy9wgYtgiATuo14wEj5D+O6WjvYGeRapEG3a5rDJJa1TPoybvyv0kbfo7amyiJPIu/WMw==}
+  componentsla@1.4.0:
+    resolution: {integrity: sha512-dThefjKdlmiqz09Gd+WsZHfpCWZNQCTEnmm9gEhP57H+IU0QMoHO0YE6pSCqM6zNZt+zQI6Ku4eKpZtFTd+iIg==}
     peerDependencies:
       react: ^18.3.1
       react-dom: ^18.3.1
@@ -1220,6 +1226,9 @@ packages:
 
   tailwind-merge@2.6.0:
     resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
+
+  tailwind-merge@3.0.2:
+    resolution: {integrity: sha512-l7z+OYZ7mu3DTqrL88RiKrKIqO3NcpEO8V/Od04bNpvk0kiIFndGEoqfuzvj4yuhRkHKjRkII2z+KS2HfPcSxw==}
 
   tailwindcss@4.0.12:
     resolution: {integrity: sha512-bT0hJo91FtncsAMSsMzUkoo/iEU0Xs5xgFgVC9XmdM9bw5MhZuQFjPNl6wxAE0SiQF/YTZJa+PndGWYSDtuxAg==}
@@ -1814,7 +1823,7 @@ snapshots:
     dependencies:
       delayed-stream: 1.0.0
 
-  componentsla@1.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  componentsla@1.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       class-variance-authority: 0.7.1
       clsx: 2.1.1
@@ -2330,6 +2339,8 @@ snapshots:
       has-flag: 4.0.0
 
   tailwind-merge@2.6.0: {}
+
+  tailwind-merge@3.0.2: {}
 
   tailwindcss@4.0.12: {}
 

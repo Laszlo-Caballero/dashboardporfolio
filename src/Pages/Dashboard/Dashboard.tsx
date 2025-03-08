@@ -2,8 +2,8 @@ import Aside from "@/Components/Layout/Aside/Aside";
 import { Route, Routes } from "react-router";
 import Main from "./Main/Main";
 import Proyects from "./Proyects/Proyects";
-import Experience from "./Experience/Experience";
 import Galery from "./Galery/Galery";
+import ExperienceRoutes from "@/Routes/ExperienceRoutes";
 
 export default function Dashboard() {
   return (
@@ -12,7 +12,7 @@ export default function Dashboard() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/proyects" element={<Proyects />} />
-        <Route path="/experience" element={<Experience />} />
+        <Route path="/experience/*" element={<ExperienceRoutes />} />
         <Route path="/galery" element={<Galery />} />
       </Routes>
     </div>
