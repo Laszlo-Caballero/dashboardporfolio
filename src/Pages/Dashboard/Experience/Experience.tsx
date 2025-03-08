@@ -1,11 +1,18 @@
 import Load from "@/Components/Shared/Load/Load";
+import ModalDelete from "@/Components/Shared/ModalDelete/ModalDelete";
 import { env } from "@/Config/Env";
 import { ExperienceResponsive, Responsive } from "@/Interfaces/types";
 import axios from "axios";
 import { Table, useQuery } from "componentsla";
+import { useState } from "react";
 import { Link } from "react-router";
 
 export default function Experience() {
+  const [open, setOpen] = useState({
+    open: false,
+    id: "",
+  });
+
   const { data, isLoading, isError } = useQuery<
     Responsive<ExperienceResponsive[]>
   >({
@@ -13,6 +20,7 @@ export default function Experience() {
       const res = await axios.get(`${env.urlBackNest}/experience`);
       return res.data;
     },
+    dependencies: [open],
   });
 
   if (isLoading) {
@@ -107,6 +115,10 @@ export default function Experience() {
             },
           },
           {
+            header: "Time",
+            accessorKey: "time",
+          },
+          {
             header: "Actions",
             cell({ row }) {
               return (
@@ -117,7 +129,12 @@ export default function Experience() {
                   >
                     Edit
                   </Link>
-                  <button className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">
+                  <button
+                    className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"
+                    onClick={() => {
+                      setOpen({ open: true, id: row.experienceId });
+                    }}
+                  >
                     Remove
                   </button>
                 </div>
@@ -125,6 +142,18 @@ export default function Experience() {
             },
           },
         ]}
+      />
+
+      <ModalDelete
+        open={open.open}
+        onClose={(value) => {
+          setOpen({
+            id: "",
+            open: value,
+          });
+        }}
+        id={open.id}
+        url="experience"
       />
     </div>
   );
